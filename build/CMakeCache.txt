@@ -23,15 +23,6 @@ BMSSafetyController_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 BMSSafetyController_SOURCE_DIR:STATIC=/home/BMSproject
 
-//Value Computed by CMake
-BmsSafetyController_BINARY_DIR:STATIC=/home/BMSproject/build
-
-//Value Computed by CMake
-BmsSafetyController_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-BmsSafetyController_SOURCE_DIR:STATIC=/home/BMSproject
-
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
