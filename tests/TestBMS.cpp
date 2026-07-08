@@ -45,6 +45,6 @@ int main() {
     verify(txFrame.arbitrationId == 0x3B4, "Correct CAN arbitration header matched.");
     verify(txFrame.payload[0] == static_cast<uint8_t>(BmsSystemState::EMERGENCY_SHUTDOWN_LATCH), "CAN payload Byte 0 accurately broadcasts safety shutdown state.");
 
-    std::cout << "\n🎉 All hard real-time BMS safety validation loops pass automotive verification!\n\n";
+    std::cout << "\n All hard real-time BMS safety validation loops pass automotive verification!\n\n";
     return 0;
 }
