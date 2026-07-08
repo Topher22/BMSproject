@@ -2,7 +2,7 @@
 #include "../include/BMScontroller.h"
 
 int main() {
-    std::cout << "=== BMW Group E-Drive Powertrain Core - Active BMS Booting ===\n";
+    std::cout << "=== E-Drive Powertrain Core - Active BMS Booting ===\n";
     BmsController vehicleBms;
 
     std::vector<BatteryCell> operationalCells = {

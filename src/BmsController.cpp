@@ -11,7 +11,6 @@ BmsController::BmsController()
 }
 
 void BmsController::processBatterySensors(const std::vector<BatteryCell>& cellMatrix) {
-    // If the system is already latched in Emergency Shutdown, do not recover automatically
     if (currentState == BmsSystemState::EMERGENCY_SHUTDOWN_LATCH) {
         return;
     }
@@ -34,8 +33,6 @@ void BmsController::processBatterySensors(const std::vector<BatteryCell>& cellMa
     // Hard Real-Time Action: Open Safety Contactors if thresholds are violated
     if (criticalFaultDetected) {
         currentState = BmsSystemState::EMERGENCY_SHUTDOWN_LATCH;
-        // In real hardware, this instantly triggers a low-level GPIO pin 
-        // to cut power to the high-voltage relay coils.
     } else if (currentState == BmsSystemState::Contactor_Closed_Nominal) {
         // Check for minor conditions (e.g., slight warming -> throttle performance)
         for (const auto& cell : cellMatrix) {
@@ -49,7 +46,7 @@ void BmsController::processBatterySensors(const std::vector<BatteryCell>& cellMa
 
 CanFdMessage BmsController::generatePowertrainCanFrame() {
     CanFdMessage frame;
-    frame.arbitrationId = 0x3B4; // BMW Powertrain Registry ID for BMS Diagnostics
+    frame.arbitrationId = 0x3B4; // Standard Powertrain Registry ID for BMS Diagnostics
     frame.dataLength = 8;
     
     // Byte 0: State representation token
