@@ -64,11 +64,6 @@ CanFdMessage BmsController::generatePowertrainCanFrame() {
     return frame;
 }
 
-void BmsController::resetSafetyLatch() {
-    activeFaultFlags = 0x0000;
-    currentState = BmsSystemState::Contactor_Closed_Nominal;
-}
-
 void BmsController::processDcFiledCharging(float chargerMaxVoltage, float chargerMaxCurrent, float currentPackVoltage) {
     if (getSystemState() == BmsSystemState::EMERGENCY_SHUTDOWN_LATCH) return;
 
@@ -91,3 +86,9 @@ void BmsController::processDcFiledCharging(float chargerMaxVoltage, float charge
         requestedAmperage = 50.0f; // Taper current off as pack reaches high SoC
     }
 }
+
+void BmsController::resetSafetyLatch() {
+    activeFaultFlags = 0x0000;
+    targetRequestedCurrent = 0.0f;
+    currentState = BmsSystemState::Contactor_Closed_Nominal; // <-- Essential state swap
+} 

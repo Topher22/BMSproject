@@ -38,6 +38,6 @@ int main() {
     verify(bms.getSystemState() == BmsSystemState::Charge_Current_Demand_Loop, "Transitioned to demand loop.");
     verify(bms.getTargetRequestedCurrent() == 200.0f, "Current capped to vehicle design limits.");
 
-    std::cout << "\n🎉 All automated safety and charging checks passed cleanly!\n\n";
+    std::cout << "\n All automated safety and charging checks passed cleanly!\n\n";
     return 0;
 }

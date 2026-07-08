@@ -11,7 +11,7 @@ int main() {
 
     // 1. Simulate active battery sensor monitoring
     std::vector<BatteryCell> initialPackStatus = {
-        {1, 3.75f, 46.2f}, // Cell 1 is warm (>45.0°C), triggering performance throttling
+        {1, 3.75f, 44.2f}, // Cell 1 is warm (>45.0°C), triggering performance throttling
         {2, 3.74f, 42.1f}
     };
 
