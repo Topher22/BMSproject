@@ -34,6 +34,7 @@ private:
     float maxSafeVoltage;
     float maxSafeTemperature;
     uint16_t activeFaultFlags; // Bitmask for logging diagnostics (UDS style)
+    float targetRequestedCurrent; // Simulated ISO 15118 current target
 
 public:
     BmsController();

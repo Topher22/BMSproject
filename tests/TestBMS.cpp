@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib>
-#include "../include/BmsController.h"
+#include "../include/BMScontroller.h"
 
 void verify(bool assertion, const std::string& checkDescription) {
     if (assertion) {

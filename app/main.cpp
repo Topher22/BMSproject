@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "../include/BmsController.h"
+#include "../include/BMScontroller.h"
 
 int main() {
     std::cout << "========================================================\n";
