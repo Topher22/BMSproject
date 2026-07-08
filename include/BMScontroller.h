@@ -3,7 +3,7 @@
 #include <string>
 #include <cstdint>
 
-// Real-time operational states of a BMW High-Voltage Battery Unit
+// Real-time operational states of a High-Voltage Battery Unit
 enum class BmsSystemState {
     PowerUp_SelfTest,
     Contactor_Closed_Nominal,
