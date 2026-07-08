@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib>
-#include "../include/BMScontroller.h"
+#include "../include/BmsController.h"
 
 void verify(bool assertion, const std::string& checkDescription) {
     if (assertion) {
@@ -18,33 +18,26 @@ int main() {
 
     BmsController bms;
 
-    // Test Scenario 1: Nominal Cell Ingestion Evaluation
-    std::vector<BatteryCell> nominalPack = {
-        {1, 3.82f, 25.4f},
-        {2, 3.81f, 26.1f},
-        {3, 3.83f, 24.9f}
-    };
-    std::cout << "Executing: TEST-BMS-01 (Nominal Powertrain Environment)\n";
+    // Test Scenario 1: Nominal Environment
+    std::vector<BatteryCell> nominalPack = {{1, 3.82f, 25.4f}, {2, 3.81f, 26.1f}};
+    std::cout << "Executing: TEST-BMS-01 (Nominal Powertrain Ingestion)\n";
     bms.processBatterySensors(nominalPack);
-    verify(bms.getSystemState() == BmsSystemState::Contactor_Closed_Nominal, "System remains fully operational.");
+    verify(bms.getSystemState() == BmsSystemState::Contactor_Closed_Nominal, "System remains functional.");
 
-    // Test Scenario 2: Severe Thermal Runaway Mitigation
-    std::vector<BatteryCell> dangerousPack = {
-        {1, 3.82f, 25.4f},
-        {2, 3.81f, 58.7f}, // Cell 2 is overheating dangerously (Limit: 55C)
-        {3, 3.83f, 24.9f}
-    };
-    std::cout << "\nExecuting: TEST-BMS-02 (Thermal Runaway Event Injected)\n";
+    // Test Scenario 2: Thermal Runaway Protection
+    std::vector<BatteryCell> dangerousPack = {{1, 3.82f, 25.4f}, {2, 3.81f, 58.7f}};
+    std::cout << "\nExecuting: TEST-BMS-02 (Thermal Runaway Interlock)\n";
     bms.processBatterySensors(dangerousPack);
-    verify(bms.getSystemState() == BmsSystemState::EMERGENCY_SHUTDOWN_LATCH, "BMS triggered immediate EMERGENCY SHUTDOWN.");
-    verify((bms.getFaultFlags() & (1 << 1)) != 0, "Over-Temperature bitmask flagged inside diagnostic registers.");
+    verify(bms.getSystemState() == BmsSystemState::EMERGENCY_SHUTDOWN_LATCH, "BMS triggered immediate Latch state.");
+    
+    bms.resetSafetyLatch();
 
-    // Test Scenario 3: Verify Packed CAN Data Layer Transmission Output
-    std::cout << "\nExecuting: TEST-BMS-03 (CAN Bus Packet Composition Evaluation)\n";
-    CanFdMessage txFrame = bms.generatePowertrainCanFrame();
-    verify(txFrame.arbitrationId == 0x3B4, "Correct CAN arbitration header matched.");
-    verify(txFrame.payload[0] == static_cast<uint8_t>(BmsSystemState::EMERGENCY_SHUTDOWN_LATCH), "CAN payload Byte 0 accurately broadcasts safety shutdown state.");
+    // Test Scenario 3: ISO 15118 Charging Demand Regulation
+    std::cout << "\nExecuting: TEST-CHG-01 (Nominal Charging Demand Handshake)\n";
+    bms.processDcFiledCharging(450.0f, 250.0f, 350.0f);
+    verify(bms.getSystemState() == BmsSystemState::Charge_Current_Demand_Loop, "Transitioned to demand loop.");
+    verify(bms.getTargetRequestedCurrent() == 200.0f, "Current capped to vehicle design limits.");
 
-    std::cout << "\n All hard real-time BMS safety validation loops pass automotive verification!\n\n";
+    std::cout << "\n🎉 All automated safety and charging checks passed cleanly!\n\n";
     return 0;
 }

@@ -1,5 +1,5 @@
-CMakeFiles/bms_core.dir/src/BmsController.cpp.o: \
- /home/BMSproject/src/BmsController.cpp /usr/include/stdc-predef.h \
+CMakeFiles/bms_core.dir/src/BMScontroller.cpp.o: \
+ /home/BMSproject/src/BMScontroller.cpp /usr/include/stdc-predef.h \
  /home/BMSproject/src/../include/BMScontroller.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \

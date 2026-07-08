@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/bms_core.dir/src/BmsController.cpp.o"
-  "CMakeFiles/bms_core.dir/src/BmsController.cpp.o.d"
+  "CMakeFiles/bms_core.dir/src/BMScontroller.cpp.o"
+  "CMakeFiles/bms_core.dir/src/BMScontroller.cpp.o.d"
   "libbms_core.a"
   "libbms_core.pdb"
 )

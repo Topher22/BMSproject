@@ -179,29 +179,29 @@ app/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bms_app.dir/build.make CMakeFiles/bms_app.dir/app/main.cpp.s
 .PHONY : app/main.cpp.s
 
-src/BmsController.o: src/BmsController.cpp.o
-.PHONY : src/BmsController.o
+src/BMScontroller.o: src/BMScontroller.cpp.o
+.PHONY : src/BMScontroller.o
 
 # target to build an object file
-src/BmsController.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bms_core.dir/build.make CMakeFiles/bms_core.dir/src/BmsController.cpp.o
-.PHONY : src/BmsController.cpp.o
+src/BMScontroller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bms_core.dir/build.make CMakeFiles/bms_core.dir/src/BMScontroller.cpp.o
+.PHONY : src/BMScontroller.cpp.o
 
-src/BmsController.i: src/BmsController.cpp.i
-.PHONY : src/BmsController.i
+src/BMScontroller.i: src/BMScontroller.cpp.i
+.PHONY : src/BMScontroller.i
 
 # target to preprocess a source file
-src/BmsController.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bms_core.dir/build.make CMakeFiles/bms_core.dir/src/BmsController.cpp.i
-.PHONY : src/BmsController.cpp.i
+src/BMScontroller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bms_core.dir/build.make CMakeFiles/bms_core.dir/src/BMScontroller.cpp.i
+.PHONY : src/BMScontroller.cpp.i
 
-src/BmsController.s: src/BmsController.cpp.s
-.PHONY : src/BmsController.s
+src/BMScontroller.s: src/BMScontroller.cpp.s
+.PHONY : src/BMScontroller.s
 
 # target to generate assembly for a file
-src/BmsController.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bms_core.dir/build.make CMakeFiles/bms_core.dir/src/BmsController.cpp.s
-.PHONY : src/BmsController.cpp.s
+src/BMScontroller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bms_core.dir/build.make CMakeFiles/bms_core.dir/src/BMScontroller.cpp.s
+.PHONY : src/BMScontroller.cpp.s
 
 tests/TestBMS.o: tests/TestBMS.cpp.o
 .PHONY : tests/TestBMS.o
@@ -241,9 +241,9 @@ help:
 	@echo "... app/main.o"
 	@echo "... app/main.i"
 	@echo "... app/main.s"
-	@echo "... src/BmsController.o"
-	@echo "... src/BmsController.i"
-	@echo "... src/BmsController.s"
+	@echo "... src/BMScontroller.o"
+	@echo "... src/BMScontroller.i"
+	@echo "... src/BMScontroller.s"
 	@echo "... tests/TestBMS.o"
 	@echo "... tests/TestBMS.i"
 	@echo "... tests/TestBMS.s"

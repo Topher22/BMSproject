@@ -69,28 +69,28 @@ include CMakeFiles/bms_core.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/bms_core.dir/flags.make
 
-CMakeFiles/bms_core.dir/src/BmsController.cpp.o: CMakeFiles/bms_core.dir/flags.make
-CMakeFiles/bms_core.dir/src/BmsController.cpp.o: /home/BMSproject/src/BmsController.cpp
-CMakeFiles/bms_core.dir/src/BmsController.cpp.o: CMakeFiles/bms_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/BMSproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/bms_core.dir/src/BmsController.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bms_core.dir/src/BmsController.cpp.o -MF CMakeFiles/bms_core.dir/src/BmsController.cpp.o.d -o CMakeFiles/bms_core.dir/src/BmsController.cpp.o -c /home/BMSproject/src/BmsController.cpp
+CMakeFiles/bms_core.dir/src/BMScontroller.cpp.o: CMakeFiles/bms_core.dir/flags.make
+CMakeFiles/bms_core.dir/src/BMScontroller.cpp.o: /home/BMSproject/src/BMScontroller.cpp
+CMakeFiles/bms_core.dir/src/BMScontroller.cpp.o: CMakeFiles/bms_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/BMSproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/bms_core.dir/src/BMScontroller.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bms_core.dir/src/BMScontroller.cpp.o -MF CMakeFiles/bms_core.dir/src/BMScontroller.cpp.o.d -o CMakeFiles/bms_core.dir/src/BMScontroller.cpp.o -c /home/BMSproject/src/BMScontroller.cpp
 
-CMakeFiles/bms_core.dir/src/BmsController.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bms_core.dir/src/BmsController.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/BMSproject/src/BmsController.cpp > CMakeFiles/bms_core.dir/src/BmsController.cpp.i
+CMakeFiles/bms_core.dir/src/BMScontroller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bms_core.dir/src/BMScontroller.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/BMSproject/src/BMScontroller.cpp > CMakeFiles/bms_core.dir/src/BMScontroller.cpp.i
 
-CMakeFiles/bms_core.dir/src/BmsController.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bms_core.dir/src/BmsController.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/BMSproject/src/BmsController.cpp -o CMakeFiles/bms_core.dir/src/BmsController.cpp.s
+CMakeFiles/bms_core.dir/src/BMScontroller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bms_core.dir/src/BMScontroller.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/BMSproject/src/BMScontroller.cpp -o CMakeFiles/bms_core.dir/src/BMScontroller.cpp.s
 
 # Object files for target bms_core
 bms_core_OBJECTS = \
-"CMakeFiles/bms_core.dir/src/BmsController.cpp.o"
+"CMakeFiles/bms_core.dir/src/BMScontroller.cpp.o"
 
 # External object files for target bms_core
 bms_core_EXTERNAL_OBJECTS =
 
-libbms_core.a: CMakeFiles/bms_core.dir/src/BmsController.cpp.o
+libbms_core.a: CMakeFiles/bms_core.dir/src/BMScontroller.cpp.o
 libbms_core.a: CMakeFiles/bms_core.dir/build.make
 libbms_core.a: CMakeFiles/bms_core.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/BMSproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libbms_core.a"

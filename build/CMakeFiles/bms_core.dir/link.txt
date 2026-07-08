@@ -1,2 +1,2 @@
-/usr/bin/ar qc libbms_core.a CMakeFiles/bms_core.dir/src/BmsController.cpp.o
+/usr/bin/ar qc libbms_core.a CMakeFiles/bms_core.dir/src/BMScontroller.cpp.o
 /usr/bin/ranlib libbms_core.a

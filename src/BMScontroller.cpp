@@ -68,3 +68,26 @@ void BmsController::resetSafetyLatch() {
     activeFaultFlags = 0x0000;
     currentState = BmsSystemState::Contactor_Closed_Nominal;
 }
+
+void BmsController::processDcFiledCharging(float chargerMaxVoltage, float chargerMaxCurrent, float currentPackVoltage) {
+    if (getSystemState() == BmsSystemState::EMERGENCY_SHUTDOWN_LATCH) return;
+
+    // Transition state machine to active digital handshake engagement
+    if (getSystemState() == BmsSystemState::Contactor_Closed_Nominal) {
+        // Negotiate parameter discovery limits before closing DC line contactors
+    }
+
+    // Safety Interlock Check: Ensure the charger can safely deliver what the pack can handle
+    if (currentPackVoltage > chargerMaxVoltage) {
+        // Critical hardware mismatch: Trip immediate protection
+        processBatterySensors({{99, 4.30f, 25.0f}}); // Forces an Over-Voltage latch fault
+        return;
+    }
+
+    // Dynamic Current Request Calculation based on charging profiles
+    // In real software, this maps to an ISO 15118 'CurrentDemandReq' payload structure
+    float requestedAmperage = 250.0f; // Request high initial current
+    if (currentPackVoltage > 400.0f) {
+        requestedAmperage = 50.0f; // Taper current off as pack reaches high SoC
+    }
+}

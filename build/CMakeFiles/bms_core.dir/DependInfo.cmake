@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/BMSproject/src/BmsController.cpp" "CMakeFiles/bms_core.dir/src/BmsController.cpp.o" "gcc" "CMakeFiles/bms_core.dir/src/BmsController.cpp.o.d"
+  "/home/BMSproject/src/BMScontroller.cpp" "CMakeFiles/bms_core.dir/src/BMScontroller.cpp.o" "gcc" "CMakeFiles/bms_core.dir/src/BMScontroller.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

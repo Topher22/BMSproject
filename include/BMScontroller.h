@@ -9,7 +9,9 @@ enum class BmsSystemState {
     Contactor_Closed_Nominal,
     Charge_Active,
     Thermal_Throttling,
-    EMERGENCY_SHUTDOWN_LATCH
+    EMERGENCY_SHUTDOWN_LATCH,
+    Charge_Parameter_Discovery,
+    Charge_Current_Demand_Loop
 };
 
 // Represents physical cell sensor telemetry acquired via SPI/ADC
@@ -45,4 +47,6 @@ public:
     BmsSystemState getSystemState() const { return currentState; }
     uint16_t getFaultFlags() const { return activeFaultFlags; }
     void resetSafetyLatch();
+    void processDcFiledCharging(float chargerMaxVoltage, float chargerMaxCurrent, float currentPackVoltage);
+    float getTargetRequestedCurrent() const { return targetRequestedCurrent; }
 };

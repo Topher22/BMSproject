@@ -15,6 +15,15 @@
 ########################
 
 //Value Computed by CMake
+BMSSafetyController_BINARY_DIR:STATIC=/home/BMSproject/build
+
+//Value Computed by CMake
+BMSSafetyController_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+BMSSafetyController_SOURCE_DIR:STATIC=/home/BMSproject
+
+//Value Computed by CMake
 BmsSafetyController_BINARY_DIR:STATIC=/home/BMSproject/build
 
 //Value Computed by CMake
@@ -131,7 +140,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=BmsSafetyController
+CMAKE_PROJECT_NAME:STATIC=BMSSafetyController
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=1.0.0
