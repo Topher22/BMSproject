@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/bms_app.dir/app/main.cpp.o -o bms_app  libbms_core.a 

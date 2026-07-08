@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/vde_tests.dir/tests/TestBMS.cpp.o -o vde_tests  libbms_core.a 

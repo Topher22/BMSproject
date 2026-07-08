@@ -1,0 +1,5 @@
+/home/BMSproject/build/CMakeFiles/bms_core.dir
+/home/BMSproject/build/CMakeFiles/bms_app.dir
+/home/BMSproject/build/CMakeFiles/vde_tests.dir
+/home/BMSproject/build/CMakeFiles/edit_cache.dir
+/home/BMSproject/build/CMakeFiles/rebuild_cache.dir
